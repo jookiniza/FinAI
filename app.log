@@ -1,0 +1,385 @@
+2026-10-19 18:31:17,352 | WARNING  | presidio-analyzer | model_to_presidio_entity_mapping is missing from configuration, using default
+2026-10-19 18:31:17,352 | WARNING  | presidio-analyzer | low_score_entity_names is missing from configuration, using default
+2026-10-19 18:31:17,353 | WARNING  | presidio-analyzer | labels_to_ignore is missing from configuration, using default
+2026-10-19 18:31:17,354 | WARNING  | presidio-analyzer | Model en_core_web_lg is not installed. Downloading...
+2026-10-19 18:36:01,319 | INFO     | presidio-analyzer | Finished downloading model en_core_web_lg
+2026-10-19 18:36:04,000 | INFO     | presidio-analyzer | Created NLP engine: spacy. Loaded models: ['en']
+2026-10-19 18:36:04,001 | INFO     | presidio-analyzer | registry not provided, creating default.
+2026-10-19 18:36:04,001 | INFO     | presidio-analyzer | Loaded recognizer: UsBankRecognizer
+2026-10-19 18:36:04,001 | INFO     | presidio-analyzer | Loaded recognizer: UsLicenseRecognizer
+2026-10-19 18:36:04,002 | INFO     | presidio-analyzer | Loaded recognizer: UsItinRecognizer
+2026-10-19 18:36:04,002 | INFO     | presidio-analyzer | Loaded recognizer: UsPassportRecognizer
+2026-10-19 18:36:04,002 | INFO     | presidio-analyzer | Loaded recognizer: UsSsnRecognizer
+2026-10-19 18:36:04,002 | INFO     | presidio-analyzer | Loaded recognizer: NhsRecognizer
+2026-10-19 18:36:04,003 | INFO     | presidio-analyzer | Loaded recognizer: SgFinRecognizer
+2026-10-19 18:36:04,003 | INFO     | presidio-analyzer | Loaded recognizer: AuAbnRecognizer
+2026-10-19 18:36:04,003 | INFO     | presidio-analyzer | Loaded recognizer: AuAcnRecognizer
+2026-10-19 18:36:04,005 | INFO     | presidio-analyzer | Loaded recognizer: AuTfnRecognizer
+2026-10-19 18:36:04,005 | INFO     | presidio-analyzer | Loaded recognizer: AuMedicareRecognizer
+2026-10-19 18:36:04,006 | INFO     | presidio-analyzer | Loaded recognizer: InPanRecognizer
+2026-10-19 18:36:04,006 | INFO     | presidio-analyzer | Loaded recognizer: InAadhaarRecognizer
+2026-10-19 18:36:04,007 | INFO     | presidio-analyzer | Loaded recognizer: InVehicleRegistrationRecognizer
+2026-10-19 18:36:04,007 | INFO     | presidio-analyzer | Loaded recognizer: CreditCardRecognizer
+2026-10-19 18:36:04,007 | INFO     | presidio-analyzer | Loaded recognizer: CryptoRecognizer
+2026-10-19 18:36:04,008 | INFO     | presidio-analyzer | Loaded recognizer: DateRecognizer
+2026-10-19 18:36:04,008 | INFO     | presidio-analyzer | Loaded recognizer: EmailRecognizer
+2026-10-19 18:36:04,009 | INFO     | presidio-analyzer | Loaded recognizer: IbanRecognizer
+2026-10-19 18:36:04,009 | INFO     | presidio-analyzer | Loaded recognizer: IpRecognizer
+2026-10-19 18:36:04,009 | INFO     | presidio-analyzer | Loaded recognizer: MedicalLicenseRecognizer
+2026-10-19 18:36:04,010 | INFO     | presidio-analyzer | Loaded recognizer: PhoneRecognizer
+2026-10-19 18:36:04,010 | INFO     | presidio-analyzer | Loaded recognizer: UrlRecognizer
+2026-10-19 18:36:04,011 | INFO     | presidio-analyzer | Loaded recognizer: SpacyRecognizer
+2026-10-19 18:36:04,011 | INFO     | security_layer | Presidio NLP engine initialised (en_core_web_lg).
+2026-10-19 18:36:04,012 | INFO     | legal_engine | RegulatoryComplianceEngine initialised.
+2026-10-19 18:36:04,015 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 18:36:04,016 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 18:36:06,245 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 18:36:06,248 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 18:36:06,248 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 18:36:08,021 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 18:36:08,024 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 18:36:08,024 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 18:36:09,875 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 18:36:09,879 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 18:36:09,879 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 18:36:12,038 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 18:36:12,042 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 18:36:12,042 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 18:36:13,930 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 18:36:13,930 | INFO     | ai_agent | SMEFinancialCopilot initialised. Model: all-MiniLM-L6-v2
+2026-10-19 18:46:08,714 | INFO     | security_layer | PII scan | token=c88cf30901067ff0 | entities=4 | risk=0.61 | 483.5ms
+2026-10-19 18:46:09,714 | INFO     | main | AUDIT | /analyze | 0684757a
+2026-10-19 18:51:09,058 | INFO     | security_layer | PII scan | token=6711995ad19e1661 | entities=5 | risk=0.54 | 186.0ms
+2026-10-19 18:51:09,059 | INFO     | main | AUDIT | /mask-pii | 91348e8a
+2026-10-19 18:51:31,033 | INFO     | security_layer | PII scan | token=ba24a0ba69e67fd5 | entities=5 | risk=0.54 | 52.7ms
+2026-10-19 18:51:31,035 | INFO     | main | AUDIT | /mask-pii | cf983411
+2026-10-19 18:51:35,652 | INFO     | security_layer | PII scan | token=68b209b8d089cd98 | entities=5 | risk=0.54 | 52.8ms
+2026-10-19 18:51:35,654 | INFO     | main | AUDIT | /mask-pii | 4350795e
+2026-10-19 18:51:37,159 | INFO     | security_layer | PII scan | token=e098400b5bab962b | entities=5 | risk=0.54 | 51.8ms
+2026-10-19 18:51:37,160 | INFO     | main | AUDIT | /mask-pii | dc8e9e4a
+2026-10-19 18:51:54,155 | INFO     | security_layer | PII scan | token=c8db3b2d9c0ef495 | entities=5 | risk=0.54 | 48.5ms
+2026-10-19 18:51:54,155 | INFO     | main | AUDIT | /mask-pii | 40aa3d6f
+2026-10-19 18:52:16,216 | INFO     | main | AUDIT | /compliance | 06fde151
+2026-10-19 18:52:46,468 | INFO     | main | AUDIT | /stress-test | ddb44990
+2026-10-19 18:53:38,605 | INFO     | main | AUDIT | /recommend | 59cd0554
+2026-10-19 19:01:18,133 | INFO     | security_layer | PII scan | token=b870cb90802611c2 | entities=4 | risk=0.46 | 52.0ms
+2026-10-19 19:01:18,848 | INFO     | main | AUDIT | /analyze | be878072
+2026-10-19 19:16:44,273 | WARNING  | presidio-analyzer | model_to_presidio_entity_mapping is missing from configuration, using default
+2026-10-19 19:16:44,274 | WARNING  | presidio-analyzer | low_score_entity_names is missing from configuration, using default
+2026-10-19 19:16:44,274 | WARNING  | presidio-analyzer | labels_to_ignore is missing from configuration, using default
+2026-10-19 19:16:47,304 | INFO     | presidio-analyzer | Created NLP engine: spacy. Loaded models: ['en']
+2026-10-19 19:16:47,306 | INFO     | presidio-analyzer | registry not provided, creating default.
+2026-10-19 19:16:47,306 | INFO     | presidio-analyzer | Loaded recognizer: UsBankRecognizer
+2026-10-19 19:16:47,307 | INFO     | presidio-analyzer | Loaded recognizer: UsLicenseRecognizer
+2026-10-19 19:16:47,307 | INFO     | presidio-analyzer | Loaded recognizer: UsItinRecognizer
+2026-10-19 19:16:47,308 | INFO     | presidio-analyzer | Loaded recognizer: UsPassportRecognizer
+2026-10-19 19:16:47,309 | INFO     | presidio-analyzer | Loaded recognizer: UsSsnRecognizer
+2026-10-19 19:16:47,309 | INFO     | presidio-analyzer | Loaded recognizer: NhsRecognizer
+2026-10-19 19:16:47,309 | INFO     | presidio-analyzer | Loaded recognizer: SgFinRecognizer
+2026-10-19 19:16:47,310 | INFO     | presidio-analyzer | Loaded recognizer: AuAbnRecognizer
+2026-10-19 19:16:47,311 | INFO     | presidio-analyzer | Loaded recognizer: AuAcnRecognizer
+2026-10-19 19:16:47,312 | INFO     | presidio-analyzer | Loaded recognizer: AuTfnRecognizer
+2026-10-19 19:16:47,313 | INFO     | presidio-analyzer | Loaded recognizer: AuMedicareRecognizer
+2026-10-19 19:16:47,313 | INFO     | presidio-analyzer | Loaded recognizer: InPanRecognizer
+2026-10-19 19:16:47,313 | INFO     | presidio-analyzer | Loaded recognizer: InAadhaarRecognizer
+2026-10-19 19:16:47,313 | INFO     | presidio-analyzer | Loaded recognizer: InVehicleRegistrationRecognizer
+2026-10-19 19:16:47,314 | INFO     | presidio-analyzer | Loaded recognizer: CreditCardRecognizer
+2026-10-19 19:16:47,314 | INFO     | presidio-analyzer | Loaded recognizer: CryptoRecognizer
+2026-10-19 19:16:47,315 | INFO     | presidio-analyzer | Loaded recognizer: DateRecognizer
+2026-10-19 19:16:47,315 | INFO     | presidio-analyzer | Loaded recognizer: EmailRecognizer
+2026-10-19 19:16:47,316 | INFO     | presidio-analyzer | Loaded recognizer: IbanRecognizer
+2026-10-19 19:16:47,316 | INFO     | presidio-analyzer | Loaded recognizer: IpRecognizer
+2026-10-19 19:16:47,316 | INFO     | presidio-analyzer | Loaded recognizer: MedicalLicenseRecognizer
+2026-10-19 19:16:47,316 | INFO     | presidio-analyzer | Loaded recognizer: PhoneRecognizer
+2026-10-19 19:16:47,316 | INFO     | presidio-analyzer | Loaded recognizer: UrlRecognizer
+2026-10-19 19:16:47,317 | INFO     | presidio-analyzer | Loaded recognizer: SpacyRecognizer
+2026-10-19 19:16:47,318 | INFO     | security_layer | Presidio NLP engine initialised (en_core_web_lg).
+2026-10-19 19:16:47,318 | INFO     | legal_engine | RegulatoryComplianceEngine initialised.
+2026-10-19 19:16:47,324 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 19:16:47,324 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 19:16:49,693 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 19:16:49,699 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 19:16:49,699 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 19:16:51,621 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 19:16:51,628 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 19:16:51,628 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 19:16:53,642 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 19:16:53,650 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 19:16:53,650 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 19:16:55,562 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 19:16:55,568 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 19:16:55,568 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 19:16:57,817 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 19:16:57,817 | INFO     | ai_agent | SMEFinancialCopilot initialised. Model: all-MiniLM-L6-v2
+2026-10-19 23:40:35,820 | WARNING  | presidio-analyzer | model_to_presidio_entity_mapping is missing from configuration, using default
+2026-10-19 23:40:35,822 | WARNING  | presidio-analyzer | low_score_entity_names is missing from configuration, using default
+2026-10-19 23:40:35,823 | WARNING  | presidio-analyzer | labels_to_ignore is missing from configuration, using default
+2026-10-19 23:40:40,423 | INFO     | presidio-analyzer | Created NLP engine: spacy. Loaded models: ['en']
+2026-10-19 23:40:40,424 | INFO     | presidio-analyzer | registry not provided, creating default.
+2026-10-19 23:40:40,424 | INFO     | presidio-analyzer | Loaded recognizer: UsBankRecognizer
+2026-10-19 23:40:40,425 | INFO     | presidio-analyzer | Loaded recognizer: UsLicenseRecognizer
+2026-10-19 23:40:40,426 | INFO     | presidio-analyzer | Loaded recognizer: UsItinRecognizer
+2026-10-19 23:40:40,427 | INFO     | presidio-analyzer | Loaded recognizer: UsPassportRecognizer
+2026-10-19 23:40:40,428 | INFO     | presidio-analyzer | Loaded recognizer: UsSsnRecognizer
+2026-10-19 23:40:40,429 | INFO     | presidio-analyzer | Loaded recognizer: NhsRecognizer
+2026-10-19 23:40:40,429 | INFO     | presidio-analyzer | Loaded recognizer: SgFinRecognizer
+2026-10-19 23:40:40,431 | INFO     | presidio-analyzer | Loaded recognizer: AuAbnRecognizer
+2026-10-19 23:40:40,431 | INFO     | presidio-analyzer | Loaded recognizer: AuAcnRecognizer
+2026-10-19 23:40:40,432 | INFO     | presidio-analyzer | Loaded recognizer: AuTfnRecognizer
+2026-10-19 23:40:40,433 | INFO     | presidio-analyzer | Loaded recognizer: AuMedicareRecognizer
+2026-10-19 23:40:40,433 | INFO     | presidio-analyzer | Loaded recognizer: InPanRecognizer
+2026-10-19 23:40:40,434 | INFO     | presidio-analyzer | Loaded recognizer: InAadhaarRecognizer
+2026-10-19 23:40:40,435 | INFO     | presidio-analyzer | Loaded recognizer: InVehicleRegistrationRecognizer
+2026-10-19 23:40:40,436 | INFO     | presidio-analyzer | Loaded recognizer: CreditCardRecognizer
+2026-10-19 23:40:40,436 | INFO     | presidio-analyzer | Loaded recognizer: CryptoRecognizer
+2026-10-19 23:40:40,437 | INFO     | presidio-analyzer | Loaded recognizer: DateRecognizer
+2026-10-19 23:40:40,439 | INFO     | presidio-analyzer | Loaded recognizer: EmailRecognizer
+2026-10-19 23:40:40,440 | INFO     | presidio-analyzer | Loaded recognizer: IbanRecognizer
+2026-10-19 23:40:40,441 | INFO     | presidio-analyzer | Loaded recognizer: IpRecognizer
+2026-10-19 23:40:40,441 | INFO     | presidio-analyzer | Loaded recognizer: MedicalLicenseRecognizer
+2026-10-19 23:40:40,441 | INFO     | presidio-analyzer | Loaded recognizer: PhoneRecognizer
+2026-10-19 23:40:40,443 | INFO     | presidio-analyzer | Loaded recognizer: UrlRecognizer
+2026-10-19 23:40:40,443 | INFO     | presidio-analyzer | Loaded recognizer: SpacyRecognizer
+2026-10-19 23:40:40,444 | INFO     | security_layer | Presidio NLP engine initialised (en_core_web_lg).
+2026-10-19 23:40:40,444 | INFO     | legal_engine | RegulatoryComplianceEngine initialised.
+2026-10-19 23:40:40,450 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 23:40:40,451 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 23:40:42,909 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 23:40:42,915 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 23:40:42,916 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 23:40:44,743 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 23:40:44,749 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 23:40:44,749 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 23:40:46,731 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 23:40:46,736 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 23:40:46,737 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 23:40:48,670 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 23:40:48,675 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 23:40:48,676 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 23:40:50,781 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 23:40:50,782 | INFO     | ai_agent | SMEFinancialCopilot initialised. Model: all-MiniLM-L6-v2
+2026-10-19 23:45:28,378 | WARNING  | presidio-analyzer | model_to_presidio_entity_mapping is missing from configuration, using default
+2026-10-19 23:45:28,380 | WARNING  | presidio-analyzer | low_score_entity_names is missing from configuration, using default
+2026-10-19 23:45:28,382 | WARNING  | presidio-analyzer | labels_to_ignore is missing from configuration, using default
+2026-10-19 23:45:31,576 | INFO     | presidio-analyzer | Created NLP engine: spacy. Loaded models: ['en']
+2026-10-19 23:45:31,577 | INFO     | presidio-analyzer | registry not provided, creating default.
+2026-10-19 23:45:31,578 | INFO     | presidio-analyzer | Loaded recognizer: UsBankRecognizer
+2026-10-19 23:45:31,580 | INFO     | presidio-analyzer | Loaded recognizer: UsLicenseRecognizer
+2026-10-19 23:45:31,580 | INFO     | presidio-analyzer | Loaded recognizer: UsItinRecognizer
+2026-10-19 23:45:31,582 | INFO     | presidio-analyzer | Loaded recognizer: UsPassportRecognizer
+2026-10-19 23:45:31,583 | INFO     | presidio-analyzer | Loaded recognizer: UsSsnRecognizer
+2026-10-19 23:45:31,584 | INFO     | presidio-analyzer | Loaded recognizer: NhsRecognizer
+2026-10-19 23:45:31,585 | INFO     | presidio-analyzer | Loaded recognizer: SgFinRecognizer
+2026-10-19 23:45:31,586 | INFO     | presidio-analyzer | Loaded recognizer: AuAbnRecognizer
+2026-10-19 23:45:31,586 | INFO     | presidio-analyzer | Loaded recognizer: AuAcnRecognizer
+2026-10-19 23:45:31,588 | INFO     | presidio-analyzer | Loaded recognizer: AuTfnRecognizer
+2026-10-19 23:45:31,589 | INFO     | presidio-analyzer | Loaded recognizer: AuMedicareRecognizer
+2026-10-19 23:45:31,589 | INFO     | presidio-analyzer | Loaded recognizer: InPanRecognizer
+2026-10-19 23:45:31,590 | INFO     | presidio-analyzer | Loaded recognizer: InAadhaarRecognizer
+2026-10-19 23:45:31,590 | INFO     | presidio-analyzer | Loaded recognizer: InVehicleRegistrationRecognizer
+2026-10-19 23:45:31,591 | INFO     | presidio-analyzer | Loaded recognizer: CreditCardRecognizer
+2026-10-19 23:45:31,592 | INFO     | presidio-analyzer | Loaded recognizer: CryptoRecognizer
+2026-10-19 23:45:31,592 | INFO     | presidio-analyzer | Loaded recognizer: DateRecognizer
+2026-10-19 23:45:31,593 | INFO     | presidio-analyzer | Loaded recognizer: EmailRecognizer
+2026-10-19 23:45:31,593 | INFO     | presidio-analyzer | Loaded recognizer: IbanRecognizer
+2026-10-19 23:45:31,594 | INFO     | presidio-analyzer | Loaded recognizer: IpRecognizer
+2026-10-19 23:45:31,596 | INFO     | presidio-analyzer | Loaded recognizer: MedicalLicenseRecognizer
+2026-10-19 23:45:31,597 | INFO     | presidio-analyzer | Loaded recognizer: PhoneRecognizer
+2026-10-19 23:45:31,598 | INFO     | presidio-analyzer | Loaded recognizer: UrlRecognizer
+2026-10-19 23:45:31,599 | INFO     | presidio-analyzer | Loaded recognizer: SpacyRecognizer
+2026-10-19 23:45:31,600 | INFO     | security_layer | Presidio NLP engine initialised (en_core_web_lg).
+2026-10-19 23:45:31,602 | INFO     | legal_engine | RegulatoryComplianceEngine initialised.
+2026-10-19 23:45:31,607 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 23:45:31,608 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 23:45:34,138 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 23:45:34,142 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 23:45:34,143 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 23:45:36,117 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 23:45:36,125 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 23:45:36,127 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 23:45:38,358 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 23:45:38,367 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 23:45:38,368 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 23:45:40,193 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 23:45:40,199 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-19 23:45:40,199 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-19 23:45:42,007 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-19 23:45:42,008 | INFO     | ai_agent | SMEFinancialCopilot initialised. Model: all-MiniLM-L6-v2
+2026-10-19 23:58:57,076 | INFO     | security_layer | PII scan | tx=TXN-00302978 | entities=8 | risk=0.59 | hash=943ffdb29f52... | 459.7ms
+2026-10-19 23:58:58,324 | INFO     | main | AUDIT | /analyze | bb6181f3
+2026-10-19 23:59:02,609 | INFO     | security_layer | PII scan | tx=TXN-619672EF | entities=5 | risk=0.57 | hash=6c7885b7f2fd... | 66.7ms
+2026-10-19 23:59:03,475 | INFO     | main | AUDIT | /analyze | a317a56c
+2026-10-19 23:59:06,486 | INFO     | security_layer | PII scan | tx=TXN-A5AFD5CE | entities=5 | risk=0.56 | hash=664e879983c3... | 42.7ms
+2026-10-19 23:59:07,311 | INFO     | main | AUDIT | /analyze | 118da157
+2026-10-19 23:59:33,805 | INFO     | security_layer | PII scan | tx=TXN-85390363 | entities=8 | risk=0.59 | hash=9e1ebd249653... | 60.0ms
+2026-10-19 23:59:34,629 | INFO     | main | AUDIT | /analyze | c0f598d7
+2026-10-19 23:59:36,875 | INFO     | security_layer | PII scan | tx=TXN-740C1DD9 | entities=5 | risk=0.57 | hash=e923afcd92a6... | 55.7ms
+2026-10-19 23:59:37,640 | INFO     | main | AUDIT | /analyze | d07a8142
+2026-10-19 23:59:44,335 | INFO     | security_layer | PII scan | tx=TXN-E11C6EBE | entities=5 | risk=0.56 | hash=d1f814ede399... | 45.8ms
+2026-10-19 23:59:45,158 | INFO     | main | AUDIT | /analyze | aaf83e47
+2026-10-20 00:00:05,190 | INFO     | security_layer | PII scan | tx=TXN-64FA532A | entities=5 | risk=0.57 | hash=c57b705efe7b... | 58.5ms
+2026-10-20 00:00:06,023 | INFO     | main | AUDIT | /analyze | 798a2acd
+2026-10-20 00:00:08,600 | INFO     | security_layer | PII scan | tx=TXN-BD551881 | entities=8 | risk=0.59 | hash=a4c06f0cb413... | 71.2ms
+2026-10-20 00:00:09,419 | INFO     | main | AUDIT | /analyze | 3823f3ee
+2026-10-20 00:00:11,255 | INFO     | security_layer | PII scan | tx=TXN-864CC4C1 | entities=5 | risk=0.56 | hash=65e70f7a0f6a... | 56.2ms
+2026-10-20 00:00:12,062 | INFO     | main | AUDIT | /analyze | dca82df4
+2026-10-20 00:00:55,666 | INFO     | security_layer | PII scan | tx=TXN-B303C464 | entities=9 | risk=0.62 | hash=fe66ba1ffaa9... | 69.6ms
+2026-10-20 00:00:55,668 | INFO     | main | AUDIT | /mask-pii | c08ec1c3
+2026-10-20 00:01:19,017 | INFO     | main | AUDIT | /compliance | 078ddd7e
+2026-10-20 00:01:32,134 | INFO     | main | AUDIT | /stress-test | c69fd393
+2026-10-20 00:01:51,220 | INFO     | main | AUDIT | /recommend | 7b0221d5
+2026-10-20 13:59:27,763 | WARNING  | presidio-analyzer | model_to_presidio_entity_mapping is missing from configuration, using default
+2026-10-20 13:59:27,765 | WARNING  | presidio-analyzer | low_score_entity_names is missing from configuration, using default
+2026-10-20 13:59:27,765 | WARNING  | presidio-analyzer | labels_to_ignore is missing from configuration, using default
+2026-10-20 13:59:32,015 | INFO     | presidio-analyzer | Created NLP engine: spacy. Loaded models: ['en']
+2026-10-20 13:59:32,015 | INFO     | presidio-analyzer | registry not provided, creating default.
+2026-10-20 13:59:32,016 | INFO     | presidio-analyzer | Loaded recognizer: UsBankRecognizer
+2026-10-20 13:59:32,017 | INFO     | presidio-analyzer | Loaded recognizer: UsLicenseRecognizer
+2026-10-20 13:59:32,019 | INFO     | presidio-analyzer | Loaded recognizer: UsItinRecognizer
+2026-10-20 13:59:32,019 | INFO     | presidio-analyzer | Loaded recognizer: UsPassportRecognizer
+2026-10-20 13:59:32,020 | INFO     | presidio-analyzer | Loaded recognizer: UsSsnRecognizer
+2026-10-20 13:59:32,021 | INFO     | presidio-analyzer | Loaded recognizer: NhsRecognizer
+2026-10-20 13:59:32,022 | INFO     | presidio-analyzer | Loaded recognizer: SgFinRecognizer
+2026-10-20 13:59:32,023 | INFO     | presidio-analyzer | Loaded recognizer: AuAbnRecognizer
+2026-10-20 13:59:32,024 | INFO     | presidio-analyzer | Loaded recognizer: AuAcnRecognizer
+2026-10-20 13:59:32,025 | INFO     | presidio-analyzer | Loaded recognizer: AuTfnRecognizer
+2026-10-20 13:59:32,026 | INFO     | presidio-analyzer | Loaded recognizer: AuMedicareRecognizer
+2026-10-20 13:59:32,027 | INFO     | presidio-analyzer | Loaded recognizer: InPanRecognizer
+2026-10-20 13:59:32,027 | INFO     | presidio-analyzer | Loaded recognizer: InAadhaarRecognizer
+2026-10-20 13:59:32,028 | INFO     | presidio-analyzer | Loaded recognizer: InVehicleRegistrationRecognizer
+2026-10-20 13:59:32,029 | INFO     | presidio-analyzer | Loaded recognizer: CreditCardRecognizer
+2026-10-20 13:59:32,030 | INFO     | presidio-analyzer | Loaded recognizer: CryptoRecognizer
+2026-10-20 13:59:32,030 | INFO     | presidio-analyzer | Loaded recognizer: DateRecognizer
+2026-10-20 13:59:32,031 | INFO     | presidio-analyzer | Loaded recognizer: EmailRecognizer
+2026-10-20 13:59:32,031 | INFO     | presidio-analyzer | Loaded recognizer: IbanRecognizer
+2026-10-20 13:59:32,032 | INFO     | presidio-analyzer | Loaded recognizer: IpRecognizer
+2026-10-20 13:59:32,035 | INFO     | presidio-analyzer | Loaded recognizer: MedicalLicenseRecognizer
+2026-10-20 13:59:32,036 | INFO     | presidio-analyzer | Loaded recognizer: PhoneRecognizer
+2026-10-20 13:59:32,037 | INFO     | presidio-analyzer | Loaded recognizer: UrlRecognizer
+2026-10-20 13:59:32,038 | INFO     | presidio-analyzer | Loaded recognizer: SpacyRecognizer
+2026-10-20 13:59:32,039 | INFO     | security_layer | Presidio NLP engine initialised (en_core_web_lg).
+2026-10-20 13:59:32,039 | INFO     | legal_engine | RegulatoryComplianceEngine initialised.
+2026-10-20 13:59:32,044 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 13:59:32,045 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 13:59:35,378 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 13:59:35,383 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 13:59:35,383 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 13:59:37,308 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 13:59:37,318 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 13:59:37,319 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 13:59:39,347 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 13:59:39,353 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 13:59:39,354 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 13:59:41,256 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 13:59:41,262 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 13:59:41,262 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 13:59:43,127 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 13:59:43,128 | INFO     | ai_agent | SMEFinancialCopilot initialised. Model: all-MiniLM-L6-v2
+2026-10-20 14:08:41,529 | INFO     | security_layer | PII scan | tx=TXN-85B16EDB | entities=8 | risk=0.59 | hash=8303fe5a4965... | 590.3ms
+2026-10-20 14:08:42,711 | INFO     | main | AUDIT | /analyze | 40ee6fc7
+2026-10-20 14:10:12,527 | INFO     | security_layer | PII scan | tx=TXN-543A98B2 | entities=5 | risk=0.57 | hash=bd5ad3d1b47d... | 63.8ms
+2026-10-20 14:10:13,970 | INFO     | main | AUDIT | /analyze | d649d177
+2026-10-20 14:11:37,130 | INFO     | security_layer | PII scan | tx=TXN-B8D50DAE | entities=5 | risk=0.56 | hash=4c1a769234f3... | 59.6ms
+2026-10-20 14:11:38,228 | INFO     | main | AUDIT | /analyze | 446529a4
+2026-10-20 14:16:17,864 | INFO     | security_layer | PII scan | tx=TXN-83014D9A | entities=7 | risk=0.53 | hash=38aec435cfeb... | 58.1ms
+2026-10-20 14:16:18,481 | INFO     | main | AUDIT | /analyze | 4dc8c5ce
+2026-10-20 14:21:30,693 | WARNING  | presidio-analyzer | model_to_presidio_entity_mapping is missing from configuration, using default
+2026-10-20 14:21:30,695 | WARNING  | presidio-analyzer | low_score_entity_names is missing from configuration, using default
+2026-10-20 14:21:30,695 | WARNING  | presidio-analyzer | labels_to_ignore is missing from configuration, using default
+2026-10-20 14:21:34,004 | INFO     | presidio-analyzer | Created NLP engine: spacy. Loaded models: ['en']
+2026-10-20 14:21:34,006 | INFO     | presidio-analyzer | registry not provided, creating default.
+2026-10-20 14:21:34,007 | INFO     | presidio-analyzer | Loaded recognizer: UsBankRecognizer
+2026-10-20 14:21:34,009 | INFO     | presidio-analyzer | Loaded recognizer: UsLicenseRecognizer
+2026-10-20 14:21:34,010 | INFO     | presidio-analyzer | Loaded recognizer: UsItinRecognizer
+2026-10-20 14:21:34,011 | INFO     | presidio-analyzer | Loaded recognizer: UsPassportRecognizer
+2026-10-20 14:21:34,013 | INFO     | presidio-analyzer | Loaded recognizer: UsSsnRecognizer
+2026-10-20 14:21:34,014 | INFO     | presidio-analyzer | Loaded recognizer: NhsRecognizer
+2026-10-20 14:21:34,015 | INFO     | presidio-analyzer | Loaded recognizer: SgFinRecognizer
+2026-10-20 14:21:34,016 | INFO     | presidio-analyzer | Loaded recognizer: AuAbnRecognizer
+2026-10-20 14:21:34,016 | INFO     | presidio-analyzer | Loaded recognizer: AuAcnRecognizer
+2026-10-20 14:21:34,017 | INFO     | presidio-analyzer | Loaded recognizer: AuTfnRecognizer
+2026-10-20 14:21:34,018 | INFO     | presidio-analyzer | Loaded recognizer: AuMedicareRecognizer
+2026-10-20 14:21:34,019 | INFO     | presidio-analyzer | Loaded recognizer: InPanRecognizer
+2026-10-20 14:21:34,019 | INFO     | presidio-analyzer | Loaded recognizer: InAadhaarRecognizer
+2026-10-20 14:21:34,020 | INFO     | presidio-analyzer | Loaded recognizer: InVehicleRegistrationRecognizer
+2026-10-20 14:21:34,020 | INFO     | presidio-analyzer | Loaded recognizer: CreditCardRecognizer
+2026-10-20 14:21:34,021 | INFO     | presidio-analyzer | Loaded recognizer: CryptoRecognizer
+2026-10-20 14:21:34,022 | INFO     | presidio-analyzer | Loaded recognizer: DateRecognizer
+2026-10-20 14:21:34,022 | INFO     | presidio-analyzer | Loaded recognizer: EmailRecognizer
+2026-10-20 14:21:34,023 | INFO     | presidio-analyzer | Loaded recognizer: IbanRecognizer
+2026-10-20 14:21:34,024 | INFO     | presidio-analyzer | Loaded recognizer: IpRecognizer
+2026-10-20 14:21:34,027 | INFO     | presidio-analyzer | Loaded recognizer: MedicalLicenseRecognizer
+2026-10-20 14:21:34,028 | INFO     | presidio-analyzer | Loaded recognizer: PhoneRecognizer
+2026-10-20 14:21:34,029 | INFO     | presidio-analyzer | Loaded recognizer: UrlRecognizer
+2026-10-20 14:21:34,030 | INFO     | presidio-analyzer | Loaded recognizer: SpacyRecognizer
+2026-10-20 14:21:34,030 | INFO     | security_layer | Presidio NLP engine initialised (en_core_web_lg).
+2026-10-20 14:21:34,031 | INFO     | legal_engine | RegulatoryComplianceEngine initialised.
+2026-10-20 14:21:34,036 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 14:21:34,036 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 14:21:36,553 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 14:21:36,559 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 14:21:36,561 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 14:21:38,505 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 14:21:38,513 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 14:21:38,515 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 14:21:40,461 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 14:21:40,467 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 14:21:40,467 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 14:21:42,375 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 14:21:42,381 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 14:21:42,382 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 14:21:44,272 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 14:21:44,273 | INFO     | ai_agent | SMEFinancialCopilot initialised. Model: all-MiniLM-L6-v2
+2026-10-20 14:22:30,237 | WARNING  | presidio-analyzer | model_to_presidio_entity_mapping is missing from configuration, using default
+2026-10-20 14:22:30,240 | WARNING  | presidio-analyzer | low_score_entity_names is missing from configuration, using default
+2026-10-20 14:22:30,240 | WARNING  | presidio-analyzer | labels_to_ignore is missing from configuration, using default
+2026-10-20 14:22:33,468 | INFO     | presidio-analyzer | Created NLP engine: spacy. Loaded models: ['en']
+2026-10-20 14:22:33,470 | INFO     | presidio-analyzer | registry not provided, creating default.
+2026-10-20 14:22:33,472 | INFO     | presidio-analyzer | Loaded recognizer: UsBankRecognizer
+2026-10-20 14:22:33,473 | INFO     | presidio-analyzer | Loaded recognizer: UsLicenseRecognizer
+2026-10-20 14:22:33,474 | INFO     | presidio-analyzer | Loaded recognizer: UsItinRecognizer
+2026-10-20 14:22:33,474 | INFO     | presidio-analyzer | Loaded recognizer: UsPassportRecognizer
+2026-10-20 14:22:33,475 | INFO     | presidio-analyzer | Loaded recognizer: UsSsnRecognizer
+2026-10-20 14:22:33,477 | INFO     | presidio-analyzer | Loaded recognizer: NhsRecognizer
+2026-10-20 14:22:33,479 | INFO     | presidio-analyzer | Loaded recognizer: SgFinRecognizer
+2026-10-20 14:22:33,480 | INFO     | presidio-analyzer | Loaded recognizer: AuAbnRecognizer
+2026-10-20 14:22:33,481 | INFO     | presidio-analyzer | Loaded recognizer: AuAcnRecognizer
+2026-10-20 14:22:33,481 | INFO     | presidio-analyzer | Loaded recognizer: AuTfnRecognizer
+2026-10-20 14:22:33,482 | INFO     | presidio-analyzer | Loaded recognizer: AuMedicareRecognizer
+2026-10-20 14:22:33,482 | INFO     | presidio-analyzer | Loaded recognizer: InPanRecognizer
+2026-10-20 14:22:33,483 | INFO     | presidio-analyzer | Loaded recognizer: InAadhaarRecognizer
+2026-10-20 14:22:33,483 | INFO     | presidio-analyzer | Loaded recognizer: InVehicleRegistrationRecognizer
+2026-10-20 14:22:33,485 | INFO     | presidio-analyzer | Loaded recognizer: CreditCardRecognizer
+2026-10-20 14:22:33,486 | INFO     | presidio-analyzer | Loaded recognizer: CryptoRecognizer
+2026-10-20 14:22:33,486 | INFO     | presidio-analyzer | Loaded recognizer: DateRecognizer
+2026-10-20 14:22:33,486 | INFO     | presidio-analyzer | Loaded recognizer: EmailRecognizer
+2026-10-20 14:22:33,487 | INFO     | presidio-analyzer | Loaded recognizer: IbanRecognizer
+2026-10-20 14:22:33,488 | INFO     | presidio-analyzer | Loaded recognizer: IpRecognizer
+2026-10-20 14:22:33,488 | INFO     | presidio-analyzer | Loaded recognizer: MedicalLicenseRecognizer
+2026-10-20 14:22:33,490 | INFO     | presidio-analyzer | Loaded recognizer: PhoneRecognizer
+2026-10-20 14:22:33,491 | INFO     | presidio-analyzer | Loaded recognizer: UrlRecognizer
+2026-10-20 14:22:33,491 | INFO     | presidio-analyzer | Loaded recognizer: SpacyRecognizer
+2026-10-20 14:22:33,492 | INFO     | security_layer | Presidio NLP engine initialised (en_core_web_lg).
+2026-10-20 14:22:33,494 | INFO     | legal_engine | RegulatoryComplianceEngine initialised.
+2026-10-20 14:22:33,499 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 14:22:33,500 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 14:22:36,108 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 14:22:36,115 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 14:22:36,116 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 14:22:38,058 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 14:22:38,066 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 14:22:38,066 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 14:22:40,110 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 14:22:40,118 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 14:22:40,119 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 14:22:42,142 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 14:22:42,156 | INFO     | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-10-20 14:22:42,157 | INFO     | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-20 14:22:44,118 | INFO     | ai_agent | SentenceTransformer loaded: all-MiniLM-L6-v2
+2026-10-20 14:22:44,118 | INFO     | ai_agent | SMEFinancialCopilot initialised. Model: all-MiniLM-L6-v2
+2026-10-20 14:23:08,887 | INFO     | security_layer | PII scan | tx=TXN-2CD8B51C | entities=8 | risk=0.59 | hash=8999d93fb7d5... | 466.4ms
+2026-10-20 14:23:09,908 | INFO     | main | AUDIT | /analyze | f2f94f27
+2026-10-20 14:23:12,012 | INFO     | security_layer | PII scan | tx=TXN-801328BE | entities=5 | risk=0.57 | hash=50b33146a828... | 71.5ms
+2026-10-20 14:23:12,784 | INFO     | main | AUDIT | /analyze | 7a431b5c
+2026-10-20 14:23:14,631 | INFO     | security_layer | PII scan | tx=TXN-60FA66D6 | entities=5 | risk=0.56 | hash=7e81d7e48f54... | 44.6ms
+2026-10-20 14:23:15,452 | INFO     | main | AUDIT | /analyze | 5b0467e0

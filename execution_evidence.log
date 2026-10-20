@@ -1,0 +1,541 @@
+2026-10-19 19:14:23,044 | INFO     | ======================================================================
+2026-10-19 19:14:23,045 | INFO     | SME Finance Copilot — Test Suite Execution Starting
+2026-10-19 19:14:23,046 | INFO     | FinTechathon 2026 — Shenzhen International FinTech Competition
+2026-10-19 19:14:23,046 | INFO     | ======================================================================
+2026-10-19 19:14:32,222 | INFO     | ✅ security_layer imported successfully
+2026-10-19 19:14:32,230 | INFO     | ✅ legal_engine imported successfully
+2026-10-19 19:14:32,236 | INFO     | ✅ cashflow_engine imported successfully
+2026-10-19 19:14:46,333 | INFO     | ✅ ai_agent imported successfully
+2026-10-19 19:14:59,361 | INFO     | ✅ main FastAPI app imported successfully
+2026-10-19 19:15:01,960 | INFO     | ----------------------------------------
+2026-10-19 19:15:01,961 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:01,962 | INFO     | TEST: test_email_redaction
+2026-10-19 19:15:02,155 | INFO     | Input text
+{
+  "text": "Contact us at ceo@acme-finance.com for details."
+}
+2026-10-19 19:15:02,156 | INFO     | Anonymized
+{
+  "result": "Contact us at <EMAIL_ADDRESS> for details.",
+  "entities": [
+    {
+      "entity_type": "EMAIL_ADDRESS",
+      "start": 14,
+      "end": 34,
+      "score": 1.0,
+      "text": "ceo@ac***"
+    },
+    {
+      "entity_type": "URL",
+      "start": 18,
+      "end": 34,
+      "score": 0.5,
+      "text": "acme-f***"
+    }
+  ]
+}
+2026-10-19 19:15:02,157 | INFO     | ✅ test_email_redaction PASSED
+2026-10-19 19:15:05,114 | INFO     | ----------------------------------------
+2026-10-19 19:15:05,114 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:05,116 | INFO     | TEST: test_phone_redaction
+2026-10-19 19:15:05,289 | INFO     | Input
+{
+  "text": "Call +34 612 345 678 or 912 345 678.",
+  "anonymized": "Call <PHONE_NUMBER> or <PHONE_NUMBER>."
+}
+2026-10-19 19:15:05,290 | INFO     | ✅ test_phone_redaction PASSED
+2026-10-19 19:15:08,317 | INFO     | ----------------------------------------
+2026-10-19 19:15:08,318 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:08,319 | INFO     | TEST: test_iban_redaction
+2026-10-19 19:15:08,336 | INFO     | IBAN test
+{
+  "anonymized": "Please transfer to <IBAN_CODE>"
+}
+2026-10-19 19:15:08,336 | INFO     | ✅ test_iban_redaction PASSED
+2026-10-19 19:15:11,351 | INFO     | ----------------------------------------
+2026-10-19 19:15:11,352 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:11,354 | INFO     | TEST: test_credit_card_redaction
+2026-10-19 19:15:11,374 | INFO     | Card test
+{
+  "anonymized": "Pay with card <CREDIT_CARD> expiry <DATE_TIME>."
+}
+2026-10-19 19:15:11,375 | INFO     | ✅ test_credit_card_redaction PASSED
+2026-10-19 19:15:14,177 | INFO     | ----------------------------------------
+2026-10-19 19:15:14,178 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:14,179 | INFO     | TEST: test_empty_text
+2026-10-19 19:15:14,180 | INFO     | ✅ test_empty_text PASSED
+2026-10-19 19:15:17,194 | INFO     | ----------------------------------------
+2026-10-19 19:15:17,195 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:17,197 | INFO     | TEST: test_risk_score_range
+2026-10-19 19:15:17,261 | INFO     | ✅ test_risk_score_range PASSED
+2026-10-19 19:15:20,282 | INFO     | ----------------------------------------
+2026-10-19 19:15:20,282 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:20,283 | INFO     | TEST: test_batch_anonymization
+2026-10-19 19:15:20,335 | INFO     | Batch report
+{
+  "total_entities": 4,
+  "breakdown": {
+    "EMAIL_ADDRESS": 1,
+    "PERSON": 1,
+    "URL": 1,
+    "PHONE_NUMBER": 1
+  }
+}
+2026-10-19 19:15:20,335 | INFO     | ✅ test_batch_anonymization PASSED
+2026-10-19 19:15:23,325 | INFO     | ----------------------------------------
+2026-10-19 19:15:23,326 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:23,329 | INFO     | TEST: test_audit_trail
+2026-10-19 19:15:26,016 | INFO     | Audit trail
+[
+  {
+    "timestamp": "2026-10-19T17:15:25.986729",
+    "transaction_id": "TXN-A40FE0A9",
+    "audit_token": "TXN-A40FE0A9",
+    "original_pii_count": 1,
+    "anonymized_text": "Call me at <PHONE_NUMBER>",
+    "regulatory_verdict": "VERIFIED_SECURE",
+    "sha256_hash": "cfe319165b5e3ce651639654460b569a0a9b7e886fd338e80ed62ecbe2add17e"
+  },
+  {
+    "timestamp": "2026-10-19T17:15:26.003612",
+    "transaction_id": "TXN-5FBD6A07",
+    "audit_token": "TXN-5FBD6A07",
+    "original_pii_count": 2,
+    "anonymized_text": "Email <EMAIL_ADDRESS>",
+    "regulatory_verdict": "VERIFIED_SECURE",
+    "sha256_hash": "68ff0d238cd6135bb3cff6aedaac76b323cbb2ad78bddef0739b234bb46b1962"
+  }
+]
+2026-10-19 19:15:26,016 | INFO     | ✅ test_audit_trail PASSED
+2026-10-19 19:15:28,711 | INFO     | ----------------------------------------
+2026-10-19 19:15:28,711 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:28,713 | INFO     | TEST: test_regex_fallback_directly
+2026-10-19 19:15:28,714 | INFO     | Regex mask result
+{
+  "masked": "CEO email <EMAIL_ADDRESS>, IBAN <IBAN_CODE>",
+  "count": 2
+}
+2026-10-19 19:15:28,714 | INFO     | ✅ test_regex_fallback_directly PASSED
+2026-10-19 19:15:31,548 | INFO     | ----------------------------------------
+2026-10-19 19:15:31,549 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:31,550 | INFO     | TEST: test_full_name_redaction
+2026-10-19 19:15:31,565 | INFO     | Name redaction
+{
+  "original": "CEO: John Smith and CFO Jane Smith met with John Doe regarding financing.",
+  "anonymized": "CEO: <PERSON> and <PERSON> met with <PERSON> regarding financing."
+}
+2026-10-19 19:15:31,565 | INFO     | ✅ test_full_name_redaction PASSED
+2026-10-19 19:15:34,881 | INFO     | ----------------------------------------
+2026-10-19 19:15:34,882 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:34,883 | INFO     | TEST: test_clean_tag_format
+2026-10-19 19:15:34,926 | INFO     | Clean tag result
+{
+  "anonymized": "Contact CEO <PERSON> at <EMAIL_ADDRESS> or <PHONE_NUMBER>. IBAN: <IBAN_CODE>. Card: <CREDIT_CARD>. CIF: <TAX_ID>."
+}
+2026-10-19 19:15:34,926 | INFO     | ✅ test_clean_tag_format PASSED
+2026-10-19 19:15:39,922 | INFO     | ----------------------------------------
+2026-10-19 19:15:39,923 | INFO     | TestSecurityLayer: setup complete
+2026-10-19 19:15:39,924 | INFO     | TEST: test_verifiable_audit_trail_object
+2026-10-19 19:15:39,940 | INFO     | Verifiable audit trail
+{
+  "timestamp": "2026-10-19T17:15:39.925218",
+  "transaction_id": "TXN-B3F2F476",
+  "audit_token": "TXN-B3F2F476",
+  "original_pii_count": 4,
+  "anonymized_text": "Director <PERSON>, email <EMAIL_ADDRESS>, phone <PHONE_NUMBER>",
+  "regulatory_verdict": "COMPLIANT",
+  "sha256_hash": "4986e3901a91cf5c4fc02db6c60b3fa06f9672ceb1c2cafe78c2a560c7016519"
+}
+2026-10-19 19:15:39,941 | INFO     | ✅ test_verifiable_audit_trail_object PASSED
+2026-10-19 19:15:39,946 | INFO     | ----------------------------------------
+2026-10-19 19:15:39,946 | INFO     | TestLegalEngine: setup complete
+2026-10-19 19:15:39,948 | INFO     | TEST: test_compliant_on_time_deposit
+2026-10-19 19:15:39,949 | INFO     | Accounts check
+{
+  "status": "COMPLIANT",
+  "days_overdue": 0
+}
+2026-10-19 19:15:39,949 | INFO     | ✅ test_compliant_on_time_deposit PASSED
+2026-10-19 19:15:39,953 | INFO     | ----------------------------------------
+2026-10-19 19:15:39,953 | INFO     | TestLegalEngine: setup complete
+2026-10-19 19:15:39,956 | INFO     | TEST: test_blocked_severely_overdue
+2026-10-19 19:15:39,956 | INFO     | Blocked check
+{
+  "status": "BLOCKED",
+  "overdue": 518
+}
+2026-10-19 19:15:39,957 | INFO     | ✅ test_blocked_severely_overdue PASSED
+2026-10-19 19:15:39,961 | INFO     | ----------------------------------------
+2026-10-19 19:15:39,962 | INFO     | TestLegalEngine: setup complete
+2026-10-19 19:15:39,963 | INFO     | TEST: test_litigation_risk_low
+2026-10-19 19:15:39,965 | INFO     | Low risk assessment
+{
+  "risk_level": "LOW",
+  "score": 0.0083
+}
+2026-10-19 19:15:39,965 | INFO     | ✅ test_litigation_risk_low PASSED
+2026-10-19 19:15:39,969 | INFO     | ----------------------------------------
+2026-10-19 19:15:39,969 | INFO     | TestLegalEngine: setup complete
+2026-10-19 19:15:39,971 | INFO     | TEST: test_litigation_risk_critical
+2026-10-19 19:15:39,972 | INFO     | Critical risk
+{
+  "risk_level": "CRITICAL",
+  "score": 1.0
+}
+2026-10-19 19:15:39,973 | INFO     | ✅ test_litigation_risk_critical PASSED
+2026-10-19 19:15:39,977 | INFO     | ----------------------------------------
+2026-10-19 19:15:39,978 | INFO     | TestLegalEngine: setup complete
+2026-10-19 19:15:39,980 | INFO     | TEST: test_aml_clear
+2026-10-19 19:15:39,981 | INFO     | AML clear
+{
+  "flag": "CLEAR",
+  "confidence": 0.02
+}
+2026-10-19 19:15:39,981 | INFO     | ✅ test_aml_clear PASSED
+2026-10-19 19:15:39,986 | INFO     | ----------------------------------------
+2026-10-19 19:15:39,986 | INFO     | TestLegalEngine: setup complete
+2026-10-19 19:15:39,987 | INFO     | TEST: test_aml_blocked_watchlist
+2026-10-19 19:15:39,988 | INFO     | AML blocked
+{
+  "flag": "BLOCKED",
+  "matched": [
+    "INTERNAL_WATCHLIST:OFFSHORE_HOLDING"
+  ]
+}
+2026-10-19 19:15:39,988 | INFO     | ✅ test_aml_blocked_watchlist PASSED
+2026-10-19 19:15:39,992 | INFO     | ----------------------------------------
+2026-10-19 19:15:39,993 | INFO     | TestLegalEngine: setup complete
+2026-10-19 19:15:39,995 | INFO     | TEST: test_full_compliance_report_structure
+2026-10-19 19:15:39,996 | INFO     | Full report summary
+{
+  "report_id": "RCE-7F58DAC1",
+  "overall_status": "COMPLIANT",
+  "compliance_score": 96,
+  "lending_eligible": true
+}
+2026-10-19 19:15:39,996 | INFO     | ✅ test_full_compliance_report_structure PASSED
+2026-10-19 19:15:40,000 | INFO     | ----------------------------------------
+2026-10-19 19:15:40,001 | INFO     | TestLegalEngine: setup complete
+2026-10-19 19:15:40,003 | INFO     | TEST: test_deposit_deadline_computation
+2026-10-19 19:15:40,003 | INFO     | Deadline test
+{
+  "fy_end": "2023-12-31",
+  "deadline": "2024-07-31"
+}
+2026-10-19 19:15:40,004 | INFO     | ✅ test_deposit_deadline_computation PASSED
+2026-10-19 19:15:40,009 | INFO     | ----------------------------------------
+2026-10-19 19:15:40,010 | INFO     | TestCashFlowEngine: setup complete (1,000 simulations)
+2026-10-19 19:15:40,012 | INFO     | TEST: test_full_stress_report_structure
+2026-10-19 19:15:40,028 | INFO     | Stress report
+{
+  "report_id": "CFE-E993DF38",
+  "liquidity_rating": "C",
+  "scenario_count": 9
+}
+2026-10-19 19:15:40,028 | INFO     | ✅ test_full_stress_report_structure PASSED
+2026-10-19 19:15:40,032 | INFO     | ----------------------------------------
+2026-10-19 19:15:40,033 | INFO     | TestCashFlowEngine: setup complete (1,000 simulations)
+2026-10-19 19:15:40,034 | INFO     | TEST: test_scenario_statistics_validity
+2026-10-19 19:15:40,047 | INFO     | Scenario baseline @ 30d
+{
+  "mean": 104513.55,
+  "var_95": 92199.09,
+  "var_99": 87450.66,
+  "p_ruin": 0.0
+}
+2026-10-19 19:15:40,048 | INFO     | Scenario moderate_stress @ 30d
+{
+  "mean": 84683.2,
+  "var_95": 61027.52,
+  "var_99": 50143.11,
+  "p_ruin": 0.0
+}
+2026-10-19 19:15:40,048 | INFO     | Scenario severe_stress @ 30d
+{
+  "mean": 58667.96,
+  "var_95": 23018.47,
+  "var_99": 8122.37,
+  "p_ruin": 0.0
+}
+2026-10-19 19:15:40,049 | INFO     | Scenario baseline @ 60d
+{
+  "mean": 109660.39,
+  "var_95": 91284.3,
+  "var_99": 85869.02,
+  "p_ruin": 0.0
+}
+2026-10-19 19:15:40,049 | INFO     | Scenario moderate_stress @ 60d
+{
+  "mean": 68760.19,
+  "var_95": 35445.89,
+  "var_99": 24083.8,
+  "p_ruin": 0.0
+}
+2026-10-19 19:15:40,050 | INFO     | Scenario severe_stress @ 60d
+{
+  "mean": 17718.22,
+  "var_95": -33658.75,
+  "var_99": -53671.85,
+  "p_ruin": 0.314
+}
+2026-10-19 19:15:40,050 | INFO     | Scenario baseline @ 90d
+{
+  "mean": 114631.56,
+  "var_95": 93844.26,
+  "var_99": 84865.86,
+  "p_ruin": 0.0
+}
+2026-10-19 19:15:40,050 | INFO     | Scenario moderate_stress @ 90d
+{
+  "mean": 51764.3,
+  "var_95": 11377.26,
+  "var_99": -2699.1,
+  "p_ruin": 0.017
+}
+2026-10-19 19:15:40,050 | INFO     | Scenario severe_stress @ 90d
+{
+  "mean": -21759.26,
+  "var_95": -85074.04,
+  "var_99": -105923.26,
+  "p_ruin": 0.727
+}
+2026-10-19 19:15:40,051 | INFO     | ✅ test_scenario_statistics_validity PASSED
+2026-10-19 19:15:40,055 | INFO     | ----------------------------------------
+2026-10-19 19:15:40,056 | INFO     | TestCashFlowEngine: setup complete (1,000 simulations)
+2026-10-19 19:15:40,058 | INFO     | TEST: test_severe_stress_worse_than_baseline
+2026-10-19 19:15:40,068 | INFO     | Baseline vs Severe 90d
+{
+  "baseline_mean": 449015.43,
+  "severe_mean": 130325.87
+}
+2026-10-19 19:15:40,069 | INFO     | ✅ test_severe_stress_worse_than_baseline PASSED
+2026-10-19 19:15:40,073 | INFO     | ----------------------------------------
+2026-10-19 19:15:40,073 | INFO     | TestCashFlowEngine: setup complete (1,000 simulations)
+2026-10-19 19:15:40,075 | INFO     | TEST: test_healthy_sme_high_liquidity_rating
+2026-10-19 19:15:40,084 | INFO     | Healthy SME rating
+{
+  "rating": "A+"
+}
+2026-10-19 19:15:40,084 | INFO     | ✅ test_healthy_sme_high_liquidity_rating PASSED
+2026-10-19 19:15:40,089 | INFO     | ----------------------------------------
+2026-10-19 19:15:40,089 | INFO     | TestCashFlowEngine: setup complete (1,000 simulations)
+2026-10-19 19:15:40,092 | INFO     | TEST: test_quick_liquidity_check
+2026-10-19 19:15:40,093 | INFO     | Quick scenario result
+{
+  "mean": 109896.94,
+  "var_95": 97420.69,
+  "p_ruin": 0.0
+}
+2026-10-19 19:15:40,094 | INFO     | ✅ test_quick_liquidity_check PASSED
+2026-10-19 19:15:50,166 | INFO     | ----------------------------------------
+2026-10-19 19:15:50,167 | INFO     | TestAIAgent: SMEFinancialCopilot initialised
+2026-10-19 19:15:50,169 | INFO     | TEST: test_recommendation_structure
+2026-10-19 19:15:51,078 | INFO     | Recommendation response
+{
+  "query_id": "63498a64ec09",
+  "count": 3,
+  "model": "all-MiniLM-L6-v2",
+  "ms": 909.46
+}
+2026-10-19 19:15:51,079 | INFO     | ✅ test_recommendation_structure PASSED
+2026-10-19 19:15:51,084 | INFO     | TEST: test_recommendations_sorted_by_score
+2026-10-19 19:15:51,697 | INFO     | Scores in order
+[
+  0.5452,
+  0.4679,
+  0.3351,
+  0.2576,
+  0.2175
+]
+2026-10-19 19:15:51,697 | INFO     | ✅ test_recommendations_sorted_by_score PASSED
+2026-10-19 19:15:51,702 | INFO     | TEST: test_score_in_valid_range
+2026-10-19 19:15:52,261 | INFO     | ✅ test_score_in_valid_range PASSED
+[
+  0.751,
+  0.2323,
+  0.2299,
+  0.1802,
+  0.1784
+]
+2026-10-19 19:15:52,266 | INFO     | TEST: test_category_filter_lending_only
+2026-10-19 19:15:52,483 | INFO     | Lending-only results
+[
+  [
+    "LOAN-BEI-02",
+    "lending"
+  ],
+  [
+    "LOAN-ICO-01",
+    "lending"
+  ],
+  [
+    "LOAN-GRN-04",
+    "lending"
+  ],
+  [
+    "LOAN-REV-03",
+    "lending"
+  ]
+]
+2026-10-19 19:15:52,484 | INFO     | ✅ test_category_filter_lending_only PASSED
+2026-10-19 19:15:52,489 | INFO     | TEST: test_product_catalogue_completeness
+2026-10-19 19:15:52,490 | INFO     | ✅ test_product_catalogue_completeness PASSED (10 products)
+2026-10-19 19:15:52,494 | INFO     | TEST: test_eu_ai_act_disclosure_present
+2026-10-19 19:15:53,040 | INFO     | ✅ test_eu_ai_act_disclosure_present PASSED
+2026-10-19 19:15:53,044 | INFO     | TEST: test_amount_filter
+2026-10-19 19:15:53,589 | INFO     | Amount-filtered results
+[
+  {
+    "id": "LOAN-BEI-02",
+    "max": 12500000
+  },
+  {
+    "id": "INS-SURETY-09",
+    "max": 10000000
+  },
+  {
+    "id": "INS-CREDIT-08",
+    "max": 5000000
+  }
+]
+2026-10-19 19:15:53,590 | INFO     | ✅ test_amount_filter PASSED
+2026-10-19 19:15:53,595 | INFO     | TEST: test_health_check [API]
+2026-10-19 19:15:53,613 | INFO     | Health response
+{
+  "service": "SME Finance Copilot",
+  "version": "2.0.0",
+  "status": "operational",
+  "timestamp": "2026-10-19T17:15:53.607126",
+  "competition": "FinTechathon 2026 \u2014 Shenzhen \u2014 Topic E",
+  "engines": {
+    "pii_masking": "operational",
+    "compliance": "operational",
+    "stress_test": "operational",
+    "ai_copilot": "operational"
+  }
+}
+2026-10-19 19:15:53,614 | INFO     | ✅ test_health_check PASSED
+2026-10-19 19:15:53,618 | INFO     | TEST: test_dashboard_endpoint [API]
+2026-10-19 19:15:53,629 | INFO     | ✅ test_dashboard_endpoint PASSED (HTML dashboard served)
+2026-10-19 19:15:53,635 | INFO     | TEST: test_mask_pii_endpoint [API]
+2026-10-19 19:15:53,670 | INFO     | PII endpoint response
+{
+  "original_length": 52,
+  "anonymized_text": "CEO: <PERSON> at <EMAIL_ADDRESS>, <PHONE_NUMBER>",
+  "entities_found": [
+    {
+      "entity_type": "EMAIL_ADDRESS",
+      "start": 19,
+      "end": 35,
+      "score": 1.0,
+      "text": "john@c***"
+    },
+    {
+      "entity_type": "PERSON",
+      "start": 5,
+      "end": 15,
+      "score": 0.85,
+      "text": "John S***"
+    },
+    {
+      "entity_type": "URL",
+      "start": 24,
+      "end": 35,
+      "score": 0.5,
+      "text": "compan***"
+    },
+    {
+      "entity_type": "PHONE_NUMBER",
+      "start": 34,
+      "end": 49,
+      "score": 0.95,
+      "text": "+34 ***"
+    }
+  ],
+  "risk_score": 0.49187499999999995,
+  "processing_time_ms": 22.84,
+  "audit_token": "TXN-0D61A26C",
+  "audit_trail": {
+    "timestamp": "2026-10-19T17:15:53.642796",
+    "transaction_id": "TXN-0D61A26C",
+    "audit_token": "TXN-0D61A26C",
+    "original_pii_count": 4,
+    "anonymized_text": "CEO: <PERSON> at <EMAIL_ADDRESS>, <PHONE_NUMBER>",
+    "regulatory_verdict": "VERIFIED_SECURE",
+    "sha256_hash": "f0d781710fa8452e16b3015832d7ab1f2e26af27d9978bb36b91233f52c0d03e"
+  },
+  "compliance_tags": [
+    "GDPR-Art25",
+    "ISO27001-A18"
+  ]
+}
+2026-10-19 19:15:53,670 | INFO     | ✅ test_mask_pii_endpoint PASSED
+2026-10-19 19:15:53,677 | INFO     | TEST: test_compliance_endpoint_compliant [API]
+2026-10-19 19:15:53,689 | INFO     | Compliance response (compliant)
+{
+  "status": "COMPLIANT",
+  "score": 99,
+  "eligible": true
+}
+2026-10-19 19:15:53,689 | INFO     | ✅ test_compliance_endpoint_compliant PASSED
+2026-10-19 19:15:53,695 | INFO     | TEST: test_compliance_endpoint_blocked [API]
+2026-10-19 19:15:53,707 | INFO     | Compliance blocked response
+{
+  "status": "BLOCKED",
+  "blocking_reasons": [
+    "Accounts 1906d overdue. Lending BLOCKED by regulation.",
+    "CRITICAL litigation risk \u2014 lending suspended."
+  ]
+}
+2026-10-19 19:15:53,708 | INFO     | ✅ test_compliance_endpoint_blocked PASSED
+2026-10-19 19:15:53,713 | INFO     | TEST: test_stress_test_endpoint [API]
+2026-10-19 19:15:53,754 | INFO     | Stress test response summary
+{
+  "report_id": "CFE-FF2163AB",
+  "rating": "C",
+  "scenario_count": 9
+}
+2026-10-19 19:15:53,754 | INFO     | ✅ test_stress_test_endpoint PASSED
+2026-10-19 19:15:53,759 | INFO     | TEST: test_recommend_endpoint [API]
+2026-10-19 19:15:54,470 | INFO     | Recommend response
+{
+  "count": 5,
+  "model": "all-MiniLM-L6-v2",
+  "products_evaluated": 10
+}
+2026-10-19 19:15:54,470 | INFO     | ✅ test_recommend_endpoint PASSED
+2026-10-19 19:15:54,475 | INFO     | TEST: test_full_analysis_pipeline [API]
+2026-10-19 19:15:55,223 | INFO     | Full pipeline response
+{
+  "pipeline_id": "PIPE-46D75DA8",
+  "pii_entities": 4,
+  "compliance_status": "COMPLIANT",
+  "liquidity_rating": "B",
+  "recommendation_count": 5,
+  "total_ms": 737.24
+}
+2026-10-19 19:15:55,223 | INFO     | ✅ test_full_analysis_pipeline PASSED
+2026-10-19 19:15:55,229 | INFO     | TEST: test_products_endpoint [API]
+2026-10-19 19:15:55,238 | INFO     | Products endpoint
+{
+  "total": 10,
+  "categories": [
+    "lending",
+    "grant",
+    "insurance"
+  ]
+}
+2026-10-19 19:15:55,239 | INFO     | ✅ test_products_endpoint PASSED
+2026-10-19 19:15:55,245 | INFO     | TEST: test_audit_trail_endpoint [API]
+2026-10-19 19:15:55,253 | INFO     | Audit trail endpoint
+{
+  "total_requests": 6,
+  "total_pii_scans": 2
+}
+2026-10-19 19:15:55,254 | INFO     | ✅ test_audit_trail_endpoint PASSED
+2026-10-19 19:15:55,261 | INFO     | TEST: test_invalid_date_format [API]
+2026-10-19 19:15:55,270 | INFO     | Invalid date response
+{
+  "status": 422
+}
+2026-10-19 19:15:55,270 | INFO     | ✅ test_invalid_date_format PASSED
